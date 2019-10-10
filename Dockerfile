@@ -13,6 +13,6 @@ RUN apk add --no-cache \
     yarn \
     openssh-client \
     rsync \
-    curl -s https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin/ --filename=composer
+    curl
 
-WORKDIR /var/www
+RUN curl -s https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin/ --filename=composer
